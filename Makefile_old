@@ -19,14 +19,14 @@
 ##########################################
 
 DEVICE  	= atmega8
-F_CPU   	= 12000000
+F_CPU   	= 16000000
 
 FUSE_L	= 0xdf
 FUSE_H	= 0xca
 
-PROGRAMMER = avrisp2
+PROGRAMMER 		= avrisp
 PROGRAMMER_PORT = /dev/ttyUSB0
-#PROGRAMMER_BAUD = 19200
+PROGRAMMER_BAUD = 19200
 
 ##########################################
 #    Don't touch anything below this     #
@@ -40,8 +40,7 @@ OBJECT_DIR 	= build/obj
 
 ## avrdude config
 AVRDUDE_FLAGS  = -c $(PROGRAMMER) -p $(DEVICE)
-#AVRDUDE_FLAGS += -P $(PROGRAMMER_PORT) -b $(PROGRAMMER_BAUD)
-AVRDUDE_FLAGS += -P $(PROGRAMMER_PORT)
+AVRDUDE_FLAGS += -P $(PROGRAMMER_PORT) -b $(PROGRAMMER_BAUD)
 
 ## compiler config
 CC 			= avr-gcc

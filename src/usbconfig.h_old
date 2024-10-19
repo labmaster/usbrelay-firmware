@@ -23,7 +23,7 @@
 
 /* ---------------------------- Relay Config ---------------------------- */
 
-#define RELAY_COUNT     8
+#define RELAY_COUNT     4
 #define CMD_ON          0xff
 #define CMD_OFF         0xfd
 #define CMD_SET_SERIAL  0xfa
